@@ -1,11 +1,18 @@
 from KeybMouse import *
-#from Calend import *
+from Calend import *
+from datetime import date
 
 beforeFriday = True
 
 fridayTime = 1
 mondayTime = 1
-
+# Gets the integer value of what month is next
+nextMonth = nxtMonth()
+# Checks if the next month is in a new year or not
+if nextMonth == 1:
+    year = nxtYear()
+else:
+    year = date.today().year
 
 # x and y coordinates of Temp Tab
 xTemplate = 907
