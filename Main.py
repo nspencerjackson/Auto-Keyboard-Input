@@ -6,6 +6,7 @@ beforeFriday = True
 fridayTime = 1
 mondayTime = 1
 
+
 # x and y coordinates of Temp Tab
 xTemplate = 907
 yTemplate = 85
@@ -35,14 +36,36 @@ yAddPage = 117
 time.sleep(1)
 
 # Changes window
-#alt_tab()
+alt_tab()
 time.sleep(0.05)
 
+# Tests to see what the position of following things are on screen:
+#
+#moveMouse(xTemplate, yTemplate)
+#moveMouse(xFriday, yFriday)
+#moveMouse(xWeekday, yWeekday)
+#moveMouse(xBottomFriday, yBottomFriday)
+#moveMouse(xBottomWeekday, yBottomWeekday)
+#moveMouse(xTopTable, yTopTable)
+#moveMouse(xMonth, yMonth)
+#moveMouse(xAddPage, yAddPage)
+#
+#
+
+# Copy Weekday Table first to have in Clipboard
 moveMouse(xTemplate, yTemplate)
-moveMouse(xFriday, yFriday)
+clickMouse()
 moveMouse(xWeekday, yWeekday)
-moveMouse(xBottomFriday, yBottomFriday)
-moveMouse(xBottomWeekday, yBottomWeekday)
-moveMouse(xTopTable, yTopTable)
+clickMouse()
+
+# Copy Weekday Table
+copy(xBottomWeekday, yBottomWeekday, xTopTable, yTopTable, mondayTime)
 moveMouse(xMonth, yMonth)
+clickMouse()
+
+# Adds a new Page to month tab
 moveMouse(xAddPage, yAddPage)
+clickMouse()
+
+# Cycles through month (day-by-day)
+for i in range()
