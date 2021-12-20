@@ -1,5 +1,5 @@
-from Keying import *
-from Calend import *
+from KeybMouse import *
+#from Calend import *
 
 beforeFriday = True
 
@@ -7,7 +7,7 @@ fridayTime = 1
 mondayTime = 1
 
 # x and y coordinates of Temp Tab
-xTemplate = 1280
+xTemplate = 907
 yTemplate = 85
 # x and y coordinates of Friday Page
 xFriday = 1801
@@ -35,8 +35,14 @@ yAddPage = 117
 time.sleep(1)
 
 # Changes window
-alt_tab()
+#alt_tab()
 time.sleep(0.05)
 
 moveMouse(xTemplate, yTemplate)
-`
+moveMouse(xFriday, yFriday)
+moveMouse(xWeekday, yWeekday)
+moveMouse(xBottomFriday, yBottomFriday)
+moveMouse(xBottomWeekday, yBottomWeekday)
+moveMouse(xTopTable, yTopTable)
+moveMouse(xMonth, yMonth)
+moveMouse(xAddPage, yAddPage)
