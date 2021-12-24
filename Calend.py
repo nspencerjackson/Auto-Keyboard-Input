@@ -29,4 +29,3 @@ def nxtMonth(inMonth):
     if nextMonth == 13:
         nextMonth = 1
     return nextMonth
-
