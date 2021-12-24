@@ -2,12 +2,15 @@ from KeybMouse import *
 from Calend import *
 from datetime import date
 
+months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 beforeFriday = True
 
 fridayTime = 1
 mondayTime = 1
+
 # Gets the integer value of what month is next
 nextMonth = nxtMonth()
+
 # Checks if the next month is in a new year or not
 if nextMonth == 1:
     year = nxtYear()
@@ -46,20 +49,7 @@ time.sleep(1)
 alt_tab()
 time.sleep(0.05)
 
-# Tests to see what the position of following things are on screen:
-#
-#moveMouse(xTemplate, yTemplate)
-#moveMouse(xFriday, yFriday)
-#moveMouse(xWeekday, yWeekday)
-#moveMouse(xBottomFriday, yBottomFriday)
-#moveMouse(xBottomWeekday, yBottomWeekday)
-#moveMouse(xTopTable, yTopTable)
-#moveMouse(xMonth, yMonth)
-#moveMouse(xAddPage, yAddPage)
-#
-#
-
-# Copy Weekday Table first to have in Clipboard
+# Open Weekday Table first to have in Clipboard
 moveMouse(xTemplate, yTemplate)
 clickMouse()
 moveMouse(xWeekday, yWeekday)
