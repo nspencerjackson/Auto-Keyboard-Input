@@ -9,7 +9,7 @@ fridayTime = 1
 mondayTime = 1
 
 # Gets the integer value of what month is next
-nextMonth = nxtMonth()
+nextMonth = nxtMonth(date.today().month) # need to create this function
 
 # Checks if the next month is in a new year or not
 if nextMonth == 1:
