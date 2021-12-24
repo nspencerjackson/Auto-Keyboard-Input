@@ -13,7 +13,7 @@ nextMonth = nxtMonth(date.today().month) # need to create this function
 
 # Checks if the next month is in a new year or not
 if nextMonth == 1:
-    year = nxtYear()
+    year = date.today().year + 1
 else:
     year = date.today().year
 
@@ -65,4 +65,7 @@ moveMouse(xAddPage, yAddPage)
 clickMouse()
 
 # Cycles through month (day-by-day)
-for i in range()
+for i in range(months[nextMonth-1]):
+    # Checks if it is a weekday
+    if weekendCheck(i+1, date.today().month, year):
+        d = checkDate()
