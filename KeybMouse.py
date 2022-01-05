@@ -6,3 +6,6 @@ keyboard = Controller()
 
 def moveMouse(x, y):
     pag.moveTo(x,y,0.3)
+
+def clickMouse():
+    pag.click()
