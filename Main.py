@@ -71,7 +71,7 @@ for i in range(months[nextMonth-1]):
         # Gets the date in the format "dd/mm/yy (Day)"
         d = checkDate(i+1, date.today().month, year)
         # Checks if it is a Friday
-        if (beforeFriday) and (fridayCheck(i+1, date.today().month, year)):
+        if (beforeFriday) and (fridayCheck(i+1, nextMonth, year)):
             # Opens Template tab
             moveMouse(xTemplate, yTemplate)
             clickMouse()
@@ -88,7 +88,7 @@ for i in range(months[nextMonth-1]):
             # Goes to Month tab
             back_to_month(xMonth, yMonth)
         # If not friday, but it is Monday
-        elif (not beforeFriday) and (not fridayCheck(i+1, date.today().month, year)):
+        elif (not beforeFriday) and (not fridayCheck(i+1, nextMonth, year)):
             # Opens template tab
             moveMouse(xTemplate, yTemplate)
             clickMouse()
