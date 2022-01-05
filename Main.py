@@ -68,4 +68,16 @@ clickMouse()
 for i in range(months[nextMonth-1]):
     # Checks if it is a weekday
     if weekendCheck(i+1, date.today().month, year):
-        d = checkDate()
+        # Gets the date in the format "dd/mm/yy (Day)"
+        d = checkDate(i+1, date.today().month, year)
+        # Checks if it is a Friday
+        if (beforeFriday) and (fridayCheck(i+1, date.today().month, year)):
+            # Opens Template tab
+            moveMouse(xTemplate, yTemplate)
+            clickMouse()
+            # Opens Friday Page
+            moveMouse(xFriday, yFriday)
+            clickMouse()
+            # Copies Friday table
+            copy(xBottomFriday, yBottomFriday, xTopTable, yTopTable, fridayTime)
+            # No longer first time copying table
