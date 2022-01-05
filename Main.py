@@ -81,3 +81,40 @@ for i in range(months[nextMonth-1]):
             # Copies Friday table
             copy(xBottomFriday, yBottomFriday, xTopTable, yTopTable, fridayTime)
             # No longer first time copying table
+            if fridayTime == 1:
+                fridayTime = 2
+            # It is Friday, allows to enter other side of if-statement
+            beforeFriday = False
+            # Goes to Month tab
+            back_to_month(xMonth, yMonth)
+        # If not friday, but it is Monday
+        elif (not beforeFriday) and (not fridayCheck(i+1, date.today().month, year)):
+            # Opens template tab
+            moveMouse(xTemplate, yTemplate)
+            clickMouse()
+            # Opens Weekday Page
+            moveMouse(xWeekday, yWeekday)
+            clickMouse()
+            # Copies Weekday Table
+            copy(xBottomWeekday, yBottomWeekday, xTopTable, yTopTable, mondayTime)
+            # No longer first time copying table
+            if mondayTime == 1:
+                mondayTime = 2
+            # Still before Friday
+            beforeFriday = True
+            # Goes back to Month tab
+            back_to_month(xMonth, yMonth)
+        # prints out the date
+        type_key(d)
+        # Pastes Table into OneNote page
+        tab()
+        paste()
+        if i != 30:
+            moveMouse(xAddPage, yAddPage)
+            clickMouse()
+# Right click on first page in tab
+moveMouse(1792, 155)
+clickMouseRight()
+# Deletes page
+moveMouse(1670, 201)
+clickMouse()
