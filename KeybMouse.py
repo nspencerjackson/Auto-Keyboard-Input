@@ -31,3 +31,16 @@ def ent():
 
 def type_key(inString):
     pag.write(inString, interval=0.000001)
+
+def copy(inX, inY, outX, outY, time):
+    if time == 1:
+        pag.moveTo(inX, inY, 0.3)
+        pag.dragTo(outX, outY, 1)
+    pag.hotkey('ctrl', 'c')
+
+def paste():
+    pag.hotkey('ctrl', 'v')
+
+def back_to_month(inX, inY):
+    moveMouse(inX, inY)
+    clickMouse()

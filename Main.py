@@ -9,7 +9,7 @@ fridayTime = 1
 mondayTime = 1
 
 # Gets the integer value of what month is next
-nextMonth = nxtMonth(date.today().month) # need to create this function
+nextMonth = nxtMonth(date.today().month)
 
 # Checks if the next month is in a new year or not
 if nextMonth == 1:
@@ -18,7 +18,7 @@ else:
     year = date.today().year
 
 # x and y coordinates of Temp Tab
-xTemplate = 907
+xTemplate = 786
 yTemplate = 85
 # x and y coordinates of Friday Page
 xFriday = 1801
@@ -36,7 +36,7 @@ yBottomWeekday = 575
 xTopTable = 45
 yTopTable = 236
 # x and y coordinates of new month tab
-xMonth = 263
+xMonth = 357
 yMonth = 90
 # x and y coordinates of Add Page button
 xAddPage = 1776
