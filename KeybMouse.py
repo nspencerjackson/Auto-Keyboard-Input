@@ -12,6 +12,9 @@ def moveMouse(x, y):
 def clickMouse():
     pag.click()
 
+def clickMouseRight():
+    pag.click(button = 'right')
+
 # Function to switch to another window
 def alt_tab():
     pag.hotkey('alt', 'tab')
