@@ -6,7 +6,8 @@ def checkDate(inDay, inMonth, inYear):
     tempDay = date(inYear, inMonth, inDay).weekday()
     if tempDay != 5:
         if tempDay != 6:
-            outDay = str(inDay) + "/" + str(inMonth) + "/" + str(inYear) + " (" + days[tempDay] + ")"
+            tempAr = str(inYear).split("20")
+            outDay = str(inDay) + "/" + str(inMonth) + "/" + tempAr[1] + " (" + days[tempDay] + ")"
     return outDay
 
 def weekendCheck(inDay, inMonth, inYear):

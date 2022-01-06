@@ -6,11 +6,10 @@ months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 beforeFriday = True
 
 fridayTime = 1
-mondayTime = 1
+mondayTime = 2
 
 # Gets the integer value of what month is next
 nextMonth = nxtMonth(date.today().month)
-print("Next month is: ", nextMonth)
 
 # Checks if the next month is in a new year or not
 if nextMonth == 1:
@@ -110,7 +109,7 @@ for i in range(months[nextMonth-1]):
         # Pastes Table into OneNote page
         tab()
         paste()
-        if i != 30:
+        if i != (months[nextMonth-1] - 1):
             moveMouse(xAddPage, yAddPage)
             clickMouse()
 # Right click on first page in tab
