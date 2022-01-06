@@ -10,6 +10,7 @@ mondayTime = 1
 
 # Gets the integer value of what month is next
 nextMonth = nxtMonth(date.today().month)
+print("Next month is: ", nextMonth)
 
 # Checks if the next month is in a new year or not
 if nextMonth == 1:
@@ -30,8 +31,8 @@ yWeekday = 155
 xBottomFriday = 927
 yBottomFriday = 745
 # x and y coordinates of bottom right Weekday Tables
-xBottomWeekday = 930
-yBottomWeekday = 575
+xBottomWeekday = 940
+yBottomWeekday = 591
 # x and y coodinates of the top of both tables
 xTopTable = 45
 yTopTable = 236
@@ -67,9 +68,9 @@ clickMouse()
 # Cycles through month (day-by-day)
 for i in range(months[nextMonth-1]):
     # Checks if it is a weekday
-    if weekendCheck(i+1, date.today().month, year):
+    if weekendCheck(i+1, nextMonth, year):
         # Gets the date in the format "dd/mm/yy (Day)"
-        d = checkDate(i+1, date.today().month, year)
+        d = checkDate(i+1, nextMonth, year)
         # Checks if it is a Friday
         if (beforeFriday) and (fridayCheck(i+1, nextMonth, year)):
             # Opens Template tab
