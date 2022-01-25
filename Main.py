@@ -27,16 +27,16 @@ yFriday = 178
 xWeekday = 1799
 yWeekday = 155
 # x and y coordinates of the bottom right Friday Tables
-xBottomFriday = 927
-yBottomFriday = 745
+xBottomFriday = 931
+yBottomFriday = 722
 # x and y coordinates of bottom right Weekday Tables
-xBottomWeekday = 940
-yBottomWeekday = 591
+xBottomWeekday = 931
+yBottomWeekday = 557
 # x and y coodinates of the top of both tables
 xTopTable = 45
 yTopTable = 236
 # x and y coordinates of new month tab
-xMonth = 357
+xMonth = 251
 yMonth = 90
 # x and y coordinates of Add Page button
 xAddPage = 1776
@@ -54,11 +54,13 @@ moveMouse(xTemplate, yTemplate)
 clickMouse()
 moveMouse(xWeekday, yWeekday)
 clickMouse()
+time.sleep(0.1)
 
 # Copy Weekday Table
-copy(xBottomWeekday, yBottomWeekday, xTopTable, yTopTable, mondayTime)
+copy(xBottomWeekday, yBottomWeekday, xTopTable, yTopTable, 1)
 moveMouse(xMonth, yMonth)
 clickMouse()
+time.sleep(0.1)
 
 # Adds a new Page to month tab
 moveMouse(xAddPage, yAddPage)
